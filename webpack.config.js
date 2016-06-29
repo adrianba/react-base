@@ -17,17 +17,17 @@ module.exports = {
     ]
   },
   output: {
-    filename: "index_bundle.js",
+    filename: "app-[hash].js",
     path: __dirname + '/dist'
   },
   plugins: [
     new webpack.DllReferencePlugin({
       context: __dirname,
-      manifest: require('./dist/ReactLib.json'),
+      manifest: require('./dist/__library.json'),
       sourceType: 'var'
     }),
     new HtmlWebpackPlugin({
-      template: __dirname + '/src/index.html',
+      template: __dirname + '/dist/__index.tmp',
       filename: 'index.html',
       inject: 'body'
     }),

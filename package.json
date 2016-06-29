@@ -5,7 +5,9 @@
   "scripts": {
     "install": "node_modules/.bin/webpack.cmd --config webpack.dll.js && webpack.cmd",
     "build": "node_modules/.bin/webpack.cmd --config webpack.dll.js && webpack.cmd",
-    "watch": "node_modules/.bin/webpack.cmd --config webpack.dll.js && webpack.cmd -w"
+    "watch": "node_modules/.bin/webpack.cmd --config webpack.dll.js && webpack.cmd -w",
+    "clean": "rd dist /q /s",
+    "fullclean": "rd dist node_modules /q /s"
   },
   "devDependencies": {
     "babel-core": "^6.8.0",
